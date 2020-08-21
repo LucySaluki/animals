@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const deleteAll = document.querySelector('#delete-all');
   deleteAll.addEventListener('click', handleDeleteAll);
+
+  const deleteItem = document.querySelector('#species');
+  deleteItem.addEventListener('dblclick', handleDeleteOne);
 });
 
 const handleFormSumbit = function(event) {
@@ -39,4 +42,8 @@ const handleFormSumbit = function(event) {
 const handleDeleteAll = function (event) {
     const speciesList = document.querySelector('#species');
     speciesList.innerHTML='';
+};
+
+const handleDeleteOne = function (event) {
+    this.removeChild(event.target);
 };

@@ -11,7 +11,10 @@ header {
 form {
     margin:20px;
 }
-
+label {
+    width:120px;
+    display:inline-block;
+}
 form div {
     margin-bottom: 10px;;
 }
@@ -27,7 +30,7 @@ ul {
 .species-item {
     list-style: none;
     background-color: lightgray;
-    border-color: maroon;
+    border-color: firebrick;
     border-style: groove;
     border-radius:5px;
     padding:20px;
@@ -36,4 +39,11 @@ ul {
 
 .species-italic {
     font-style: italic;
+}
+
+.buttons {
+    background-color: red;
+    color:white;
+    text-emphasis: bold;
+    border-radius: 10px;
 }
