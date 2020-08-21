@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Thick-knees of the World</title>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 </head>
 <body>
-    
+    <form id="new-species">
+        <div>
+            <label for="common-name">Common Name:</label>
+            <input type="text" id="common-name" required>
+        </div>
+        <div>
+            <label for="scientific-name">Scientific Name:</label>
+            <input type="text" id="scientific-name" required>
+        </div>
+        <div>
+            <label for="range-location">Range:</label>
+            <input type="text" id="range-location" required>
+        </div>
+        <div>
+            <label for="common-name">Common Name:</label>
+            <select id="status" required>
+                <option value="NE">Not evaluated</option>
+                <option value="LC">Least concern</option>
+                <option value="NT">Near threatened</option>
+                <option value="VU">Vulnerable</option>
+                <option value="EN">Endangered</option>
+                <option value="CR">Critcally endangered</option>
+                <option value="EW">Extinct in the wild</option>
+                <option value="EX">Extinct</option>
+            </select>
+        </div>
+            <input type="submit"/>
+        </div>
+        <div>
+            <button id = "delete-all">Delete</button>
+        </div>
+    </form>
+    <h1>Species List</h1>
+    <ul id="species"></ul>
 </body>
 </html>
