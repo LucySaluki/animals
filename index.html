@@ -8,6 +8,10 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 </head>
 <body>
+    <header>
+        <h1>IUCN</h1>
+        <h2>Thick-knee Species</h2>
+    </header>   
     <form id="new-species">
         <div>
             <label for="common">Common Name:</label>
@@ -25,14 +29,14 @@
             <label for="status">IUCN Status:</label>
             <select id="status" required>
                 <option value="" disabled selected></option>
-                <option value="NE">Not evaluated</option>
-                <option value="LC">Least concern</option>
-                <option value="NT">Near threatened</option>
-                <option value="VU">Vulnerable</option>
-                <option value="EN">Endangered</option>
-                <option value="CR">Critcally endangered</option>
-                <option value="EW">Extinct in the wild</option>
-                <option value="EX">Extinct</option>
+                <option value="Not evaluated">Not evaluated</option>
+                <option value="Least concern">Least concern</option>
+                <option value="Near threatened">Near threatened</option>
+                <option value="Vulnerable">Vulnerable</option>
+                <option value="Endangered">Endangered</option>
+                <option value="Critcally endangered">Critcally endangered</option>
+                <option value="Extinct in the wild">Extinct in the wild</option>
+                <option value="Extinct">Extinct</option>
             </select>
         </div>
             <input type="submit"/>
@@ -41,7 +45,9 @@
             <button id = "delete-all">Delete</button>
         </div>
     </form>
-    <h1>Species List</h1>
-    <ul id="species"></ul>
+    <h1 id="species-header">Species List</h1>
+    <div id=output-species>
+        <ul id="species"></ul>
+    </div>
 </body>
 </html>

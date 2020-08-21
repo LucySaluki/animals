@@ -1,0 +1,39 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin:0px;
+}
+header {
+    background-color:red;
+    color: white;
+    padding: 20px;
+}
+
+form {
+    margin:20px;
+}
+
+form div {
+    margin-bottom: 10px;;
+}
+#species-header {
+    margin:20px;
+}
+ul {
+    display:flex;
+    justify-content: space-between;
+    flex-direction:row;
+    flex-flow: wrap;
+}
+.species-item {
+    list-style: none;
+    background-color: lightgray;
+    border-color: maroon;
+    border-style: groove;
+    border-radius:5px;
+    padding:20px;
+    margin-bottom:10px;
+}
+
+.species-italic {
+    font-style: italic;
+}
