@@ -22,6 +22,14 @@ const handleFormSumbit = function(event) {
     const speciesList = document.createElement('li');
     speciesList.classList.add('species-item');
     
+    const newSeen= document.createElement('span');
+    if (event.target.seen.value === 'yes'){
+        newSeen.textContent = "✔";
+    } else {
+        newSeen.textContent = "✘";  
+    }
+    speciesList.appendChild(newSeen);
+
     const newCommon = document.createElement('h3');
     newCommon.textContent = `Species: ${event.target.common.value}`;
     speciesList.appendChild(newCommon);
@@ -57,7 +65,6 @@ const handleDeleteOne = function (event) {
 };
 
 const handleImage = function (event){
-
     if (event.target.classList.value ==='species-italic') {
         const parentItem = event.target.parentNode;
         const newImage = document.createElement('img');

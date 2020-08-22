@@ -53,3 +53,9 @@ ul {
     text-emphasis: bold;
     color:white;
 }
+
+span {
+    color: green;
+    font-size: 20px;
+    text-align-last: right;
+}
