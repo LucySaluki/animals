@@ -8,6 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const deleteItem = document.querySelector('#species');
   deleteItem.addEventListener('dblclick', handleDeleteOne);
+
+  const imageItem = document.querySelector('#species');
+  imageItem.addEventListener('mouseover', handleImage);
+
+  const imageRemove = document.querySelector('#species');
+  imageRemove.addEventListener('mouseout', handleRemoveImage);
 });
 
 const handleFormSumbit = function(event) {
@@ -22,7 +28,9 @@ const handleFormSumbit = function(event) {
 
     const newScientific = document.createElement('h4');
     newScientific.classList.add('species-italic');
-    newScientific.textContent = event.target.scientific.value;
+    newScientificValue=event.target.scientific.value
+    newScientific.textContent = newScientificValue;
+    newScientific.value = newScientificValue.substring(newScientificValue.lastIndexOf(" ") + 1);
     speciesList.appendChild(newScientific);
 
     const newRange = document.createElement('p');
@@ -46,4 +54,33 @@ const handleDeleteAll = function (event) {
 
 const handleDeleteOne = function (event) {
     this.removeChild(event.target);
+};
+
+const handleImage = function (event){
+
+    if (event.target.classList.value ==='species-italic') {
+        const parentItem = event.target.parentNode;
+        const newImage = document.createElement('img');
+        newImage.setAttribute("src", `images/${event.target.value}.jpg`);
+        newImage.id ='image';
+        parentItem.appendChild(newImage);
+        newImage.addEventListener('error',handleErrorImage);
+    };
+};
+const handleErrorImage= function(event){   
+    const parentItem = event.target.parentNode;
+    parentItem.removeChild(event.target);
+    const newText = document.createElement('p');
+    newText.classList.add('no-image');
+    newText.id = 'image';
+    newText.textContent="There is no image";
+    parentItem.appendChild(newText);
+};
+
+const handleRemoveImage = function (event) {
+    if (event.target.classList.value ==='species-italic') {
+        const parentItem = event.target;
+        const imageRemove = document.getElementById('image');
+        imageRemove.remove();
+    };
 };
